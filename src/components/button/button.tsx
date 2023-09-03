@@ -1,10 +1,15 @@
 import React from 'react';
 import {Text, TouchableOpacity} from 'react-native';
 
-export default function Button() {
+interface ButtonProps {
+  label: string;
+  onPress: () => void;
+}
+
+export default function Button({onPress, label}: ButtonProps) {
   return (
-    <TouchableOpacity onPress={() => {}}>
-      <Text>Press me!</Text>
+    <TouchableOpacity onPress={onPress}>
+      <Text>{label}</Text>
     </TouchableOpacity>
   );
 }

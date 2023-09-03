@@ -8,7 +8,9 @@ buildscript {
         targetSdkVersion = 33
 
         // We use NDK 23 which has both M1 support and is the side-by-side NDK version from AGP.
-        ndkVersion = "23.1.7779620"
+        // NDK version 23 didn't work on my machine, because it was missing a source.properties file.
+        // So I had to upload to version 25. Developed in a Macbook Pro 2019, Intel Core processor.
+        ndkVersion = "25.2.9519653"
     }
     repositories {
         google()
