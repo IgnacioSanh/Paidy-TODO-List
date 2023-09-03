@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, TouchableOpacity} from 'react-native';
+import {Text, TouchableOpacity, View} from 'react-native';
 
 interface ButtonProps {
   label: string;
@@ -9,7 +9,9 @@ interface ButtonProps {
 export default function Button({onPress, label}: ButtonProps) {
   return (
     <TouchableOpacity onPress={onPress}>
-      <Text>{label}</Text>
+      <View style={{backgroundColor: 'red'}}>
+        <Text>{label}</Text>
+      </View>
     </TouchableOpacity>
   );
 }

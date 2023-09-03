@@ -1,12 +1,12 @@
 import React from 'react';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 
-import Home from './src/Home';
+import Login from './src/screens/login/login';
 
 export default function App() {
   return (
     <SafeAreaProvider>
-      <Home />
+      <Login />
     </SafeAreaProvider>
   );
 }
