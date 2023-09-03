@@ -10,17 +10,12 @@
     "test": "jest"
   },
   "dependencies": {
-    "expo": "^49.0.0",
     "react": "18.2.0",
-    "react-native": "0.72.4",
-    "react-native-safe-area-context": "^4.7.2",
-    "expo-local-authentication": "~13.4.1",
-    "expo-linking": "~5.0.2"
+    "react-native": "0.72.4"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@babel/preset-env": "^7.20.0",
-    "@babel/preset-typescript": "^7.22.11",
     "@babel/runtime": "^7.20.0",
     "@react-native/eslint-config": "^0.72.2",
     "@react-native/metro-config": "^0.72.11",
@@ -28,7 +23,6 @@
     "@types/react": "^18.0.24",
     "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.2.1",
-    "babel-plugin-module-resolver": "^5.0.0",
     "eslint": "^8.19.0",
     "jest": "^29.2.1",
     "metro-react-native-babel-preset": "0.76.8",

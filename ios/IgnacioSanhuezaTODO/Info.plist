@@ -4,8 +4,6 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
-	<key>NSFaceIDUsageDescription</key>
-	<string>Allow $(PRODUCT_NAME) to use FaceID</string>
 	<key>CFBundleDisplayName</key>
 	<string>IgnacioSanhuezaTODO</string>
 	<key>CFBundleExecutable</key>
