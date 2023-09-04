@@ -17,6 +17,7 @@ import {Button, Screen} from '~components';
 import fontStyle from '~theme/fonts';
 
 import styles from './styles';
+import {useAuthContext} from '~contexts/useAuthContext';
 
 const ANDROID_SECURITY_SETTINGS = 'android.settings.SECURITY_SETTINGS';
 const APPLE_OS_NAME = 'ios';
@@ -25,6 +26,7 @@ export default function Login() {
   const [isLoading, setIsLoading] = useState(false);
   const [isEnrolled, setIsEnrolled] = useState(false);
   const appState = useRef(AppState.currentState);
+  const {changeAuthentication} = useAuthContext();
 
   const isIOS = Platform.OS === APPLE_OS_NAME;
 
@@ -60,7 +62,7 @@ export default function Login() {
   async function authenticate() {
     const {success} = await authenticateAsync();
     if (success) {
-      console.log('redirect');
+      changeAuthentication(true);
     }
   }
 
