@@ -1,12 +1,15 @@
 import React from 'react';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
+import {AuthProvider} from '~contexts/useAuthContext';
 
-import Login from './src/screens/login/login';
+import RootNavigator from '~screens/rootNavigator';
 
 export default function App() {
   return (
     <SafeAreaProvider>
-      <Login />
+      <AuthProvider>
+        <RootNavigator />
+      </AuthProvider>
     </SafeAreaProvider>
   );
 }

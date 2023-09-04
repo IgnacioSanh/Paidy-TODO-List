@@ -6,8 +6,10 @@ module.exports = {
       {
         alias: {
           '~components': './src/components',
+          '~contexts': './src/contexts',
           '~screens': './src/screens',
           '~theme': './src/theme',
+          '~types': './src/types',
         },
       },
     ],
