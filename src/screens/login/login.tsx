@@ -69,14 +69,24 @@ export default function Login() {
       <View style={styles.flexEnd}>
         {isEnrolled ? (
           <>
-            <Text style={[fontStyle.gothicFamily, fontStyle.h1]}>
+            <Text
+              style={[
+                fontStyle.gothicFamily,
+                fontStyle.h1,
+                styles.textSpacing,
+              ]}>
               Please Authenticate
             </Text>
             <Button label="Authenticate" onPress={authenticate} />
           </>
         ) : (
           <>
-            <Text style={[fontStyle.gothicFamily, fontStyle.h1]}>
+            <Text
+              style={[
+                fontStyle.gothicFamily,
+                fontStyle.h1,
+                styles.textSpacing,
+              ]}>
               Set Authentication to proceed
             </Text>
             <Button label="Go to Settings" onPress={openSettings} />
