@@ -1,12 +1,5 @@
 import React, {useEffect, useRef, useState} from 'react';
-import {
-  Text,
-  ActivityIndicator,
-  View,
-  Platform,
-  Linking,
-  AppState,
-} from 'react-native';
+import {Text, View, Platform, Linking, AppState} from 'react-native';
 import {
   authenticateAsync,
   getEnrolledLevelAsync,
@@ -23,7 +16,6 @@ const ANDROID_SECURITY_SETTINGS = 'android.settings.SECURITY_SETTINGS';
 const APPLE_OS_NAME = 'ios';
 
 export default function Login() {
-  const [isLoading, setIsLoading] = useState(false);
   const [isEnrolled, setIsEnrolled] = useState(false);
   const appState = useRef(AppState.currentState);
   const {changeAuthentication} = useAuthContext();
@@ -49,14 +41,12 @@ export default function Login() {
   }, []);
 
   async function checkEnrollment() {
-    setIsLoading(true);
     if (isIOS) {
       setIsEnrolled(await isEnrolledAsync());
     } else {
       const enrollmentLevel = await getEnrolledLevelAsync();
       setIsEnrolled(enrollmentLevel > 0);
     }
-    setIsLoading(false);
   }
 
   async function authenticate() {
@@ -72,14 +62,6 @@ export default function Login() {
     } else {
       await Linking.sendIntent(ANDROID_SECURITY_SETTINGS);
     }
-  }
-
-  if (isLoading) {
-    return (
-      <Screen>
-        <ActivityIndicator size="large" />
-      </Screen>
-    );
   }
 
   return (
