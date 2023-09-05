@@ -2,7 +2,7 @@ import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 
-import {useAuthContext} from '~contexts/useAuthContext';
+import {useAuthContext} from '~contexts/authContext';
 import {ScreenNames} from '~types';
 import {LoginScreen, TodoScreen} from './index';
 
