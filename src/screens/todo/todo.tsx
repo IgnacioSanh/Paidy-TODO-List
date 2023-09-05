@@ -4,11 +4,13 @@ import {Text, View} from 'react-native';
 import {Screen} from '~components';
 import TodoCard from '~screens/todo/components/todoCard/todoCard';
 import fontStyle from '~theme/fonts';
+import {useTasksContext} from '~contexts/tasksContext';
 
 import {BottomSection} from './components';
 import styles from './styles';
 
 export default function TodoScreen() {
+  const {tasks} = useTasksContext();
   return (
     <Screen>
       <View style={styles.wrapper}>
@@ -22,14 +24,9 @@ export default function TodoScreen() {
             ]}>
             TODO:
           </Text>
-          <TodoCard
-            title="First itemaaaaaagasdjkahsdashduihasdiuhasdiuhasiudhsaiuh"
-            onRemove={() => 1}
-          />
-          <TodoCard
-            title="First itemaaaaaagasdjkahsdashduihasdiuhasdiuhasiudhsaiuh"
-            onRemove={() => 1}
-          />
+          {tasks.map(({title}) => (
+            <TodoCard title={title} onRemove={() => 1} />
+          ))}
         </View>
         <BottomSection />
       </View>

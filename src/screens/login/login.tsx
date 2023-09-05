@@ -10,7 +10,7 @@ import {Button, Screen} from '~components';
 import fontStyle from '~theme/fonts';
 
 import styles from './styles';
-import {useAuthContext} from '~contexts/useAuthContext';
+import {useAuthContext} from '~contexts/authContext';
 
 const ANDROID_SECURITY_SETTINGS = 'android.settings.SECURITY_SETTINGS';
 const APPLE_OS_NAME = 'ios';
