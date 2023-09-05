@@ -2,13 +2,14 @@ import {StyleSheet} from 'react-native';
 import {Spacings} from '~theme/spacings';
 
 const styles = StyleSheet.create({
-  flexEnd: {
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-    marginBottom: Spacings.large * 2,
+  title: {
+    marginBottom: Spacings.extraLarge,
+  },
+  wrapper: {
+    justifyContent: 'space-between',
     flex: 1,
   },
-  textSpacing: {
+  marginBottom: {
     marginBottom: Spacings.large,
   },
 });

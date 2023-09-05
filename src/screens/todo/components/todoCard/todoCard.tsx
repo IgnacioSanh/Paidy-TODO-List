@@ -1,9 +1,11 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 
-import Button from '../button/button';
-import styles from './styles';
+import Button from '~components/button/button';
 import fontStyle from '~theme/fonts';
+import {ButtonVariants} from '~types/components';
+
+import styles from './styles';
 
 interface TodoCardProps {
   title: string;
@@ -25,7 +27,7 @@ export default function TodoCard({
       <View style={styles.taskRow}>
         <View style={styles.circle} />
         {/* Handle extra long text */}
-        <View style={styles.flex1}>
+        <View style={[styles.flex1, styles.rightMargin]}>
           <Text
             style={[fontStyle.gothicFamily, fontStyle.p, styles.flex1]}
             numberOfLines={1}
@@ -34,7 +36,11 @@ export default function TodoCard({
           </Text>
         </View>
       </View>
-      <Button label="REMOVE" onPress={onRemove} />
+      <Button
+        label="REMOVE"
+        onPress={onRemove}
+        variant={ButtonVariants.OUTLINE}
+      />
     </View>
   );
 }

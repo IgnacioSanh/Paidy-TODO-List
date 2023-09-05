@@ -35,6 +35,9 @@ const styles = StyleSheet.create({
   flex1: {
     flex: 1,
   },
+  rightMargin: {
+    marginRight: Spacings.small,
+  },
 });
 
 export default styles;
