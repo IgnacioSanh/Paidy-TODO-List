@@ -1,12 +1,12 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {FlatList, Text, View} from 'react-native';
 
 import {Screen} from '~components';
-import TodoCard from '~screens/todo/components/todoCard/todoCard';
+import TodoCard from '~components/todo/todoCard/todoCard';
 import fontStyle from '~theme/fonts';
 import {useTasksContext} from '~contexts/tasksContext';
 
-import {BottomSection} from './components';
+import {BottomSection} from '~components/todo';
 import styles from './styles';
 
 export default function TodoScreen() {
@@ -24,10 +24,18 @@ export default function TodoScreen() {
             ]}>
             TODO:
           </Text>
-          {tasks.map(({title}) => (
-            <TodoCard title={title} onRemove={() => 1} />
-          ))}
+          <FlatList
+            data={tasks}
+            keyExtractor={item => item.id}
+            showsVerticalScrollIndicator={false}
+            renderItem={({item}) => (
+              <View style={styles.separator}>
+                <TodoCard task={item} />
+              </View>
+            )}
+          />
         </View>
+
         <BottomSection />
       </View>
     </Screen>

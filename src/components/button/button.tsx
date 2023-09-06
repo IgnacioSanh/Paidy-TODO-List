@@ -9,16 +9,23 @@ interface ButtonProps {
   label: string;
   onPress: () => void;
   variant?: ButtonVariants;
+  disabled?: boolean;
 }
 
 export default function Button({
   onPress,
   label,
   variant = ButtonVariants.SOLID,
+  disabled = false,
 }: ButtonProps) {
   return (
-    <TouchableOpacity onPress={onPress}>
-      <View style={[styles.wrapper, styles[variant]]}>
+    <TouchableOpacity onPress={onPress} disabled={disabled}>
+      <View
+        style={[
+          styles.wrapper,
+          styles[variant],
+          disabled ? styles.disabled : null,
+        ]}>
         <Text style={styles[`${variant}Text`]}>{label}</Text>
       </View>
     </TouchableOpacity>

@@ -22,6 +22,9 @@ const styles = StyleSheet.create({
   outlineText: {
     color: Colors.PRIMARY,
   },
+  disabled: {
+    backgroundColor: Colors.BACKGROUND_GRAY,
+  },
   solidText: {
     color: Colors.WHITE,
     fontWeight: 'bold',

@@ -6,14 +6,15 @@ import React, {
 } from 'react';
 
 import {Task} from '~types/tasks';
+import {generateID} from '~utils/idUtils';
 
 interface TasksContext {
   tasks: Task[];
   selectedTask?: Task;
-  addTask: (task: Task) => void;
+  addTask: (title: string) => void;
   removeTask: (id: string) => void;
   updateTask: (task: Task) => void;
-  selectTask: (id: string) => void;
+  selectTask: (id?: string) => void;
 }
 
 const initialState: TasksContext = {
@@ -31,7 +32,8 @@ export default function TaskProvider({children}: PropsWithChildren<{}>) {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [selectedTask, setSelectedTask] = useState<Task>();
 
-  function addTask(task: Task) {
+  function addTask(title: string) {
+    const task: Task = {title, id: generateID()};
     setTasks(currentTasks => [...currentTasks, task]);
   }
 
@@ -56,9 +58,13 @@ export default function TaskProvider({children}: PropsWithChildren<{}>) {
       return mappedTask;
     });
     setTasks(modifiedTasks);
+    setSelectedTask(undefined);
   }
 
-  function selectTask(id: string) {
+  function selectTask(id?: string) {
+    if (!id) {
+      return setSelectedTask(undefined);
+    }
     const taskToSelect = tasks.find(taskToFind => taskToFind.id === id);
     if (!taskToSelect) {
       throw Error("The task to select doesn't exist");
