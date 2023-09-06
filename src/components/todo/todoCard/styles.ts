@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.WHITE,
     paddingVertical: Spacings.medium,
     paddingHorizontal: Spacings.large,
-    marginBottom: Spacings.medium,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',

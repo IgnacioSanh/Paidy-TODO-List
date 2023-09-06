@@ -11,6 +11,10 @@ const styles = StyleSheet.create({
   },
   marginBottom: {
     marginBottom: Spacings.large,
+    flex: 1,
+  },
+  separator: {
+    marginBottom: Spacings.large,
   },
 });
 
