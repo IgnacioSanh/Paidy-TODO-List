@@ -2,8 +2,11 @@ import React, {
   createContext,
   PropsWithChildren,
   useContext,
+  useEffect,
   useState,
 } from 'react';
+import usePersistance from '~hooks/usePersistance';
+import {StorageKeys} from '~types/storage';
 
 import {Task} from '~types/tasks';
 import {generateID} from '~utils/idUtils';
@@ -30,6 +33,23 @@ const tasksContext = createContext<TasksContext>(initialState);
 
 export default function TaskProvider({children}: PropsWithChildren<{}>) {
   const [tasks, setTasks] = useState<Task[]>([]);
+  const {setKey, getStringValue} = usePersistance();
+
+  useEffect(() => {
+    const persistedTasksString = getStringValue(StorageKeys.TASKS);
+    const parsedTasks = JSON.parse(persistedTasksString);
+    setTasks(parsedTasks);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // I've decided to update the local storage after each update
+  // instead of using it as the local state for all the parsing it would
+  // need on each update.
+  useEffect(() => {
+    setKey(StorageKeys.TASKS, JSON.stringify(tasks));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tasks]);
+
   const [selectedTask, setSelectedTask] = useState<Task>();
 
   function addTask(title: string) {
