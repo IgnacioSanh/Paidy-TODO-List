@@ -1,14 +1,17 @@
-# Paidy's TO-DO challenge
+# Paidy's TO-DO challenge
 
 This app is part of the Paidy's technical challenge for the Senior React Native developer position.
 
 ## Table of contents
 
 - [Requirements](#requirements)
-- [Folder structure](#folder-structure)
-- [Using the app](#using-the-app)
-- [Used libraries](#used-libraries)
 - [Solution approach](#solution-approach)
+- [Folder structure](#folder-structure)
+- [Screenshots](#screenshots)
+- [Using the app](#using-the-app)
+- [Videos](#videos)
+- [Used libraries](#used-libraries)
+
 - [Installing and running the app](#installing-and-running-the-app)
 
 ## Requirements
@@ -81,6 +84,17 @@ The basic flow is the following:
 4. To add a task, we can see at the botom an input, to write the title of the task to be added. Once we add a text here, we can press the add button, and the task will be added at the end of the list.
 5. To Edit a task, we should click anywhere in the task card. Anywhere but the remove button... that one will remove the task!. Once we press anywhere in the card, we are going to see a border surrounding the card, marking it as selected. Now, if we look at the bottom input, we can see that is pre-filled with the current task title. If we modify that text, and press the edit button, we are going to see that the title will change in the list.
 6. Finally, to remove a task, we could press the Remove button at the right side of the card, and the card will dissapear from the list.
+
+## Videos
+
+### iOS Flow
+https://github.com/IgnacioSanh/Paidy-TODO-List/assets/18095479/a710b9bb-d6e8-484d-a09b-f7096a8a6306
+
+### Android Flow
+
+https://github.com/IgnacioSanh/Paidy-TODO-List/assets/18095479/8aa693d9-19d1-457b-bb24-1c21508defaa
+
+
 
 ## Used libraries
 
