@@ -12,10 +12,19 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		29E84C9AC6194AA7952F5C64 /* GothicA1-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FF793508FD24C9F9CE8CD1B /* GothicA1-Thin.ttf */; };
+		2FCF9093B64C42AA83A29F4C /* GothicA1-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32A6C4C2AD9D4159AFE3D728 /* GothicA1-Medium.ttf */; };
+		41E37738F52F488CB24B78AD /* GothicA1-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 204B1C54F42C46A08F9132E2 /* GothicA1-ExtraBold.ttf */; };
+		47DE209B89AE4971BBAB64E5 /* GothicA1-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70D01773E6BB4A6B905810FA /* GothicA1-Black.ttf */; };
 		65E91DA8FF88BE6D496D18E0 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B42166E031FCB530BF950D3 /* ExpoModulesProvider.swift */; };
 		7316350CDDADE480DCFA739A /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF04DCBBB646FC2266B6F8C /* ExpoModulesProvider.swift */; };
 		7699B88040F8A987B510C191 /* libPods-IgnacioSanhuezaTODO-IgnacioSanhuezaTODOTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-IgnacioSanhuezaTODO-IgnacioSanhuezaTODOTests.a */; };
+		8156A284AA8A46009582777D /* GothicA1-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 890D60233BAB49ACBEB36796 /* GothicA1-ExtraLight.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8E2624021AED43D08968DBD7 /* GothicA1-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E727D92B9B724C8387210BF0 /* GothicA1-Light.ttf */; };
+		9CAAAF8A660049268ADC8CAC /* GothicA1-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAC5BDFD7ED34F14B8C8BD4A /* GothicA1-Bold.ttf */; };
+		A8FFD530777347678BCDAFBD /* GothicA1-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B10AD9279804E178D4A5BAB /* GothicA1-Regular.ttf */; };
+		BA3D28AC0F8440CD9F93E300 /* GothicA1-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 687C5F60FCB24D01BD882356 /* GothicA1-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,13 +49,22 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = IgnacioSanhuezaTODO/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-IgnacioSanhuezaTODO-IgnacioSanhuezaTODOTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IgnacioSanhuezaTODO-IgnacioSanhuezaTODOTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B42166E031FCB530BF950D3 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-IgnacioSanhuezaTODO/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		204B1C54F42C46A08F9132E2 /* GothicA1-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GothicA1-ExtraBold.ttf"; path = "../assets/fonts/GothicA1-ExtraBold.ttf"; sourceTree = "<group>"; };
+		32A6C4C2AD9D4159AFE3D728 /* GothicA1-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GothicA1-Medium.ttf"; path = "../assets/fonts/GothicA1-Medium.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-IgnacioSanhuezaTODO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgnacioSanhuezaTODO.debug.xcconfig"; path = "Target Support Files/Pods-IgnacioSanhuezaTODO/Pods-IgnacioSanhuezaTODO.debug.xcconfig"; sourceTree = "<group>"; };
 		3DF04DCBBB646FC2266B6F8C /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-IgnacioSanhuezaTODO-IgnacioSanhuezaTODOTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-IgnacioSanhuezaTODO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgnacioSanhuezaTODO.release.xcconfig"; path = "Target Support Files/Pods-IgnacioSanhuezaTODO/Pods-IgnacioSanhuezaTODO.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-IgnacioSanhuezaTODO-IgnacioSanhuezaTODOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgnacioSanhuezaTODO-IgnacioSanhuezaTODOTests.debug.xcconfig"; path = "Target Support Files/Pods-IgnacioSanhuezaTODO-IgnacioSanhuezaTODOTests/Pods-IgnacioSanhuezaTODO-IgnacioSanhuezaTODOTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-IgnacioSanhuezaTODO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IgnacioSanhuezaTODO.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FF793508FD24C9F9CE8CD1B /* GothicA1-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GothicA1-Thin.ttf"; path = "../assets/fonts/GothicA1-Thin.ttf"; sourceTree = "<group>"; };
+		687C5F60FCB24D01BD882356 /* GothicA1-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GothicA1-SemiBold.ttf"; path = "../assets/fonts/GothicA1-SemiBold.ttf"; sourceTree = "<group>"; };
+		70D01773E6BB4A6B905810FA /* GothicA1-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GothicA1-Black.ttf"; path = "../assets/fonts/GothicA1-Black.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = IgnacioSanhuezaTODO/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		890D60233BAB49ACBEB36796 /* GothicA1-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GothicA1-ExtraLight.ttf"; path = "../assets/fonts/GothicA1-ExtraLight.ttf"; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-IgnacioSanhuezaTODO-IgnacioSanhuezaTODOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgnacioSanhuezaTODO-IgnacioSanhuezaTODOTests.release.xcconfig"; path = "Target Support Files/Pods-IgnacioSanhuezaTODO-IgnacioSanhuezaTODOTests/Pods-IgnacioSanhuezaTODO-IgnacioSanhuezaTODOTests.release.xcconfig"; sourceTree = "<group>"; };
+		9B10AD9279804E178D4A5BAB /* GothicA1-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GothicA1-Regular.ttf"; path = "../assets/fonts/GothicA1-Regular.ttf"; sourceTree = "<group>"; };
+		CAC5BDFD7ED34F14B8C8BD4A /* GothicA1-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GothicA1-Bold.ttf"; path = "../assets/fonts/GothicA1-Bold.ttf"; sourceTree = "<group>"; };
+		E727D92B9B724C8387210BF0 /* GothicA1-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GothicA1-Light.ttf"; path = "../assets/fonts/GothicA1-Light.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -118,6 +136,23 @@
 			name = IgnacioSanhuezaTODO;
 			sourceTree = "<group>";
 		};
+		7CCA4A9C078F48C5ADCCFCD9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				70D01773E6BB4A6B905810FA /* GothicA1-Black.ttf */,
+				CAC5BDFD7ED34F14B8C8BD4A /* GothicA1-Bold.ttf */,
+				204B1C54F42C46A08F9132E2 /* GothicA1-ExtraBold.ttf */,
+				890D60233BAB49ACBEB36796 /* GothicA1-ExtraLight.ttf */,
+				E727D92B9B724C8387210BF0 /* GothicA1-Light.ttf */,
+				32A6C4C2AD9D4159AFE3D728 /* GothicA1-Medium.ttf */,
+				9B10AD9279804E178D4A5BAB /* GothicA1-Regular.ttf */,
+				687C5F60FCB24D01BD882356 /* GothicA1-SemiBold.ttf */,
+				5FF793508FD24C9F9CE8CD1B /* GothicA1-Thin.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +170,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
 				B089E535277E156FF2A9AE63 /* ExpoModulesProviders */,
+				7CCA4A9C078F48C5ADCCFCD9 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -276,6 +312,15 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				47DE209B89AE4971BBAB64E5 /* GothicA1-Black.ttf in Resources */,
+				9CAAAF8A660049268ADC8CAC /* GothicA1-Bold.ttf in Resources */,
+				41E37738F52F488CB24B78AD /* GothicA1-ExtraBold.ttf in Resources */,
+				8156A284AA8A46009582777D /* GothicA1-ExtraLight.ttf in Resources */,
+				8E2624021AED43D08968DBD7 /* GothicA1-Light.ttf in Resources */,
+				2FCF9093B64C42AA83A29F4C /* GothicA1-Medium.ttf in Resources */,
+				A8FFD530777347678BCDAFBD /* GothicA1-Regular.ttf in Resources */,
+				BA3D28AC0F8440CD9F93E300 /* GothicA1-SemiBold.ttf in Resources */,
+				29E84C9AC6194AA7952F5C64 /* GothicA1-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,7 +4,16 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "~components/*": ["src/components/*"]
+      "~components/*": ["src/components/*"],
+      "~components": ["src/components/index"],
+      "~contexts/*": ["src/contexts/*"],
+      "~hooks/*": ["src/hooks/*"],
+      "~screens/*": ["src/screens/*"],
+      "~screens": ["src/screens/index"],
+      "~theme/*": ["src/theme/*"],
+      "~types/*": ["src/types/*"],
+      "~types": ["src/types/index"],
+      "~utils/*": ["src/utils/*"],
     }
   }
 }

@@ -1,12 +1,18 @@
 import React from 'react';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 
-import Home from './src/Home';
+import {AuthProvider} from '~contexts/authContext';
+import TaskProvider from '~contexts/tasksContext';
+import RootNavigator from '~screens/rootNavigator';
 
 export default function App() {
   return (
     <SafeAreaProvider>
-      <Home />
+      <AuthProvider>
+        <TaskProvider>
+          <RootNavigator />
+        </TaskProvider>
+      </AuthProvider>
     </SafeAreaProvider>
   );
 }
