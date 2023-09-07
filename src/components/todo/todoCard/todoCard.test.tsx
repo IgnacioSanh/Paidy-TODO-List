@@ -1,20 +1,31 @@
 import React from 'react';
 import {fireEvent, render} from '@testing-library/react-native';
 
+import {Task} from '~types/tasks';
+import {defaultContextValue} from '~types/tests';
+import {contextProviderHOC} from '~contexts/tasksContext';
+
 import TodoCard, {CONTAINER_TEST_ID} from './todoCard';
 
 describe('todoCard', () => {
-  const TITLE = 'Test Title';
+  const defaultTask: Task = {
+    id: 'id',
+    title: 'task',
+  };
 
-  test('Displays title', () => {
-    const {getByText} = render(<TodoCard title={TITLE} onRemove={jest.fn()} />);
-    getByText(TITLE);
+  test('Displays title and a remove button is present', () => {
+    const {getByText} = render(<TodoCard task={defaultTask} />);
+    getByText(defaultTask.title);
+    getByText(/remove/i);
   });
 
   test('When the remove button is pressed, the remove function is called', () => {
-    const onRemoveMock = jest.fn();
+    const removeTaskMock = jest.fn();
     const {getByText} = render(
-      <TodoCard title={TITLE} onRemove={onRemoveMock} />,
+      contextProviderHOC(<TodoCard task={defaultTask} />, {
+        ...defaultContextValue,
+        removeTask: removeTaskMock,
+      }),
     );
     // Get the remove button by label
     const button = getByText(/remove/i);
@@ -22,11 +33,11 @@ describe('todoCard', () => {
     fireEvent.press(button);
 
     // Expect the mock function to be called
-    expect(onRemoveMock).toBeCalled();
+    expect(removeTaskMock).toBeCalledWith(defaultTask.id);
   });
 
   test("By default, we don't see any border", () => {
-    const {getByTestId} = render(<TodoCard title={TITLE} onRemove={jest.fn} />);
+    const {getByTestId} = render(<TodoCard task={defaultTask} />);
     const container = getByTestId(CONTAINER_TEST_ID);
 
     expect(container.props.style).not.toContainEqual(
@@ -36,7 +47,10 @@ describe('todoCard', () => {
 
   it('Shows a blue border when an item is selected', () => {
     const {getByTestId} = render(
-      <TodoCard title={TITLE} onRemove={jest.fn} selected />,
+      contextProviderHOC(<TodoCard task={defaultTask} />, {
+        ...defaultContextValue,
+        selectedTask: defaultTask,
+      }),
     );
     const container = getByTestId(CONTAINER_TEST_ID);
     // When the item has the "selected" prop as true, a border should be styled.
@@ -44,5 +58,20 @@ describe('todoCard', () => {
     expect(container.props.style).toContainEqual(
       expect.objectContaining({borderWidth: 2}),
     );
+  });
+
+  test('When the card is pressed, selectTask is called', () => {
+    const selectTaskMock = jest.fn();
+    const {getByText} = render(
+      contextProviderHOC(<TodoCard task={defaultTask} />, {
+        ...defaultContextValue,
+        selectTask: selectTaskMock,
+      }),
+    );
+
+    const cardTitle = getByText(defaultTask.title);
+    fireEvent.press(cardTitle);
+
+    expect(selectTaskMock).toBeCalledWith(defaultTask.id);
   });
 });

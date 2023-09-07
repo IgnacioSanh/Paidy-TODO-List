@@ -13,10 +13,11 @@ export default function usePersistance() {
     return mmkv.getString(key);
   }
 
-  function getBooleanValue(key: string): Boolean {
+  function getBooleanValue(key: string): boolean {
     return mmkv.getBoolean(key);
   }
-  function getNumberValue(key: string): Number {
+
+  function getNumberValue(key: string): number {
     return mmkv.getNumber(key);
   }
 
