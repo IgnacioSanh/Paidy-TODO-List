@@ -9,16 +9,8 @@ import usePersistance from '~hooks/usePersistance';
 import {StorageKeys} from '~types/storage';
 
 import {Task} from '~types/tasks';
+import {TasksContext} from '~types/taskContext';
 import {generateID} from '~utils/idUtils';
-
-interface TasksContext {
-  tasks: Task[];
-  selectedTask?: Task;
-  addTask: (title: string) => void;
-  removeTask: (id: string) => void;
-  updateTask: (task: Task) => void;
-  selectTask: (id?: string) => void;
-}
 
 const initialState: TasksContext = {
   tasks: [],
@@ -37,8 +29,10 @@ export default function TaskProvider({children}: PropsWithChildren<{}>) {
 
   useEffect(() => {
     const persistedTasksString = getStringValue(StorageKeys.TASKS);
-    const parsedTasks = JSON.parse(persistedTasksString);
-    setTasks(parsedTasks);
+    if (persistedTasksString) {
+      const parsedTasks = JSON.parse(persistedTasksString);
+      setTasks(parsedTasks);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -113,4 +107,12 @@ export function useTasksContext() {
     throw new Error('Context must be used within an Task Provider');
   }
   return context;
+}
+
+export function contextProviderHOC(children, initialStoreValue: TasksContext) {
+  return (
+    <tasksContext.Provider value={initialStoreValue}>
+      {children}
+    </tasksContext.Provider>
+  );
 }
