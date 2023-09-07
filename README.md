@@ -52,6 +52,23 @@ All the folder referenced here can be called by typescript aliases, which can be
 - **/types**: The types folder includes files that contains interfaces (in those cases a .d.ts extension is used for major clarity), and for the rest, in case we need some enums, we can create or add into existing files related by topic.
 - **/utils**: All utils that we could have. In this case is just the idUtils, that again, is only a dependency inversion file, so we don't have to call the library itself in case that we want to change it in the future.
 
+## Screenshots
+
+### iOS
+<div style="display: flex; flex-direction: row;">
+   <img src="https://github.com/IgnacioSanh/Paidy-TODO-List/assets/18095479/7ad5a6ba-ad76-406b-ac7c-f426d178885f" height="400px" />
+   <img src="https://github.com/IgnacioSanh/Paidy-TODO-List/assets/18095479/6ca2ddb6-325b-4a28-8e88-b2685eeba2a8" height="400px" />
+   <img src="https://github.com/IgnacioSanh/Paidy-TODO-List/assets/18095479/823bb5a3-101f-4e23-a09e-59baaafa008c" height="400px" />
+   <img src="https://github.com/IgnacioSanh/Paidy-TODO-List/assets/18095479/597594fa-bae0-43e5-86d1-3d7fc90c9527" height="400px" />
+</div>
+
+### Android
+<div style="display: flex; flex-direction: row;">
+   <img src="https://github.com/IgnacioSanh/Paidy-TODO-List/assets/18095479/03ac4628-be84-487d-90ce-52267a1d2596" height="400px" />
+   <img src="https://github.com/IgnacioSanh/Paidy-TODO-List/assets/18095479/c1926c05-3825-479b-9b30-4f53af3af1f8" height="400px" />
+   <img src="https://github.com/IgnacioSanh/Paidy-TODO-List/assets/18095479/903d74d7-b01d-4718-bca9-78d27e951e31" height="400px" />
+</div>
+
 ## Using the app
 
 The basic flow is the following:
