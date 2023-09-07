@@ -90,6 +90,12 @@ The basic flow is the following:
 ### iOS Flow
 https://github.com/IgnacioSanh/Paidy-TODO-List/assets/18095479/a710b9bb-d6e8-484d-a09b-f7096a8a6306
 
+### Android Flow
+
+https://github.com/IgnacioSanh/Paidy-TODO-List/assets/18095479/8aa693d9-19d1-457b-bb24-1c21508defaa
+
+
+
 ## Used libraries
 
 The following libraries were used as dependency for this app:
